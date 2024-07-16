@@ -25,7 +25,7 @@ public class verifyName {
         driver.findElement(By.id("login-password")).sendKeys("Vwo@1234");
         driver.findElement(By.id("js-login-btn")).click();
         Thread.sleep(5000);
-        String username = driver.findElement(By.xpath("//span[contains(@data-qa,'lufexuloga')]")).getText();
+        String username = driver.findElement(By.xpath("//span[@data-qa='lufexuloga']")).getText();
         System.out.println(username);
         Assert.assertEquals("V W",username);
         driver.quit();
